@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="loginViewModel"
+            type="com.safwa.zwadatkom.usercontrol.LoginViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".usercontrol.LoginFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginStart="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textSize="22sp"
+
+                        android:layout_marginTop="136.95dp"
+                        android:text="مرحبا بك في "
+                        android:lineSpacingExtra="0sp"
+                        android:gravity="start|center_vertical" />
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:textStyle="bold"
+                        android:textSize="28sp"
+
+                        android:text="تطبيق زوداتكم"
+                        android:lineSpacingExtra="0sp"
+                        android:gravity="start|center_vertical" />
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/black"
+
+                    android:text="البريد والجوال"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="32dp"
+                    android:lineSpacingExtra="7sp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/etcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:src="@drawable/envelope"
+                        android:layout_margin="12dp"
+                        android:padding="4dp"
+                        android:layout_height="28dp" />
+
+                    <EditText
+
+                        android:background="@color/gray"
+                        android:layout_marginStart="16dp"
+                        android:id="@+id/emailId"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:gravity="center_vertical"
+                        android:text="ahmedfares659@gmail.com"
+                        android:hint="الايميل او الجوال"
+                        android:layout_width="match_parent"
+                        android:textSize="12sp"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/black"
+
+                    android:text="كلمة المرور"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="32dp"
+                    android:lineSpacingExtra="7sp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/etcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:src="@drawable/lockopen"
+                        android:layout_margin="12dp"
+                        android:padding="4dp"
+                        android:layout_height="28dp" />
+
+                    <EditText
+                        android:background="@color/gray"
+                        android:layout_marginStart="16dp"
+
+                        android:hint="كلمة المرور"
+                        android:id="@+id/passId"
+                        android:text="123456789"
+                        android:inputType="textPassword"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:textSize="16sp"
+                        android:layout_height="match_parent" />
+
+                   <RelativeLayout
+                       android:id="@+id/showRelatev"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                       <ImageView
+
+                           android:src="@drawable/ic_eye_24"
+                           android:padding="4dp"
+                           android:visibility="gone"
+                           android:layout_margin="8dp"
+                           android:layout_width="28dp"
+                           android:textColor="@color/black"
+                           android:id="@+id/hide_pass_btn"
+                           android:gravity="center"
+                           android:layout_gravity="center_vertical"
+                           android:layout_height="wrap_content" />
+
+                       <ImageView
+
+                           android:id="@+id/show_pass_btn"
+                           android:layout_width="28dp"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center_vertical"
+                           android:layout_marginStart="8dp"
+                           android:layout_marginTop="8dp"
+                           android:layout_marginEnd="8dp"
+                           android:layout_marginBottom="8dp"
+                           android:gravity="center"
+                           android:padding="4dp"
+                           android:src="@drawable/eyeslash"
+                           android:textColor="@color/black" />
+                   </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="32dp"
+                    android:text=" نسيت كلمة المرور"
+
+                    android:lineSpacingExtra="11sp"
+
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/ripple_effect"
+                    android:layout_gravity="center"
+
+                    android:id="@+id/loginBtn"
+                    android:minWidth="200dp"
+                    android:textColor="@color/white"
+                    android:text="دخـول"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:id="@+id/login_progress"
+                    />
+
+                <TextView
+                    android:id="@+id/some_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:text="او دخول عبر"
+                    android:gravity="center_horizontal|center_vertical" />
+
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_margin="8dp"
+                        android:background="@drawable/ripple_gray"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:background="@drawable/ripple_gray"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:elevation="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/face"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_margin="8dp"
+                        android:background="@drawable/ripple_gray"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:background="@drawable/ripple_gray"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:elevation="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/twitter"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_margin="8dp"
+                        android:background="@drawable/ripple_gray"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:background="@drawable/ripple_gray"
+                            android:layout_height="match_parent" />
+
+                        <ImageView
+                            android:elevation="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:src="@drawable/google"
+                            android:padding="12dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center|bottom"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="مستخدم جديد "
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:id="@+id/singuptv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" انشاء حساب "
+                        android:textColor="@color/green" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+</layout>

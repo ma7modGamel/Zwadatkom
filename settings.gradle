@@ -1,0 +1,13 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+
+        maven { url "https://maven.xyz.com" }
+
+    }
+}
+rootProject.name = "Zwadatkom"
+include ':app'

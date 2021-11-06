@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_margin="32dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:id="@+id/closeOtpActinity"
+                    android:onClick="closeOtpActivity"
+                    android:layout_gravity="end"
+                    android:src="@mipmap/ic_close"
+                    android:layout_height="30dp"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_smart"
+                    android:layout_height="150dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_margin="16dp"
+                android:lineSpacingExtra="13sp"
+                android:gravity="center_horizontal"
+                android:text="من فضلك ادخل كود التفعيل"
+                />
+        </LinearLayout>
+        <RelativeLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/digits"
+
+            android:gravity="center">
+
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:id="@+id/rel1"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@drawable/edittextcardgray">
+
+
+                <EditText
+                    android:id="@+id/digit1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:backgroundTint="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black">
+
+                    <requestFocus />
+
+                </EditText>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:id="@+id/rel2"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@drawable/edittextcardgray"
+                android:layout_toRightOf="@+id/rel1">
+
+                <EditText
+                    android:id="@+id/digit2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:backgroundTint="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:id="@+id/rel3"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@drawable/edittextcardgray"
+                android:layout_toRightOf="@+id/rel2">
+
+                <EditText android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:id="@+id/digit3"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:cursorVisible="false"
+                    android:imeOptions="actionNext"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_alignParentLeft="true"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:id="@+id/rel4"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@drawable/edittextcardgray"
+                android:layout_toRightOf="@+id/rel3">
+
+                <EditText android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:id="@+id/digit4"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:cursorVisible="false"
+                    android:imeOptions="actionNext"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_alignParentLeft="true"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:id="@+id/rel5"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@drawable/edittextcardgray"
+                android:layout_toRightOf="@+id/rel4">
+
+                <EditText
+                    android:id="@+id/digit5"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:backgroundTint="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:padding="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:id="@+id/rel6"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:background="@drawable/edittextcardgray"
+                android:layout_toRightOf="@+id/rel5">
+
+                <EditText android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:id="@+id/digit6"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:cursorVisible="false"
+                    android:imeOptions="actionNext"
+                    android:maxLength="1"
+                    android:textAlignment="center"
+                    android:inputType="number"
+                    android:backgroundTint="@android:color/transparent"
+                    android:layout_alignParentLeft="true"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/plzEnterCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:lines="2"
+            android:text="من فضلك ادخل كود التفعيل"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+
+                android:gravity="center"
+
+                android:id="@+id/confirm_cod"
+                android:elevation="10dp"
+                android:text="ارسال"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/ripple_effect"
+            android:layout_gravity="center"
+            android:minWidth="200dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+
+
+        <TextView
+            android:id="@+id/resendCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="اعادة ارسال"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/errorCode"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="16dp"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="@color/colorPrimary" />-->
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
