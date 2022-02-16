@@ -9,207 +9,227 @@
     app:contentScaleClosed="1.0"
     app:contentScaleOpen="0.75"
 
-    tools:context=".Home.MainActivity">
+    tools:context=".home.MainActivity">
 
 
+    <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+
+        android:tag="@string/tag_menu"
+        app:itemIconTint="@color/white">
 
 
-
-        <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
+        <LinearLayout
+            android:id="@+id/topLayBack"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layoutDirection="rtl"
-            android:orientation="vertical"
 
-            android:tag="@string/tag_menu"
-            app:itemIconTint="@color/white">
-
+            android:background="@color/white"
+            android:gravity="end"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
 
-                android:background="@color/white"
-                android:gravity="end"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/white">
+
+                <RelativeLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/bag"
+
+                        android:layout_width="15dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/bagblack" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/bndgRed"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_alignTop="@+id/bag"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@color/purple_200"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imgShowMenu2"
+
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/showmenu" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_layout_Myprofile"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+
+                android:gravity="center|bottom"
                 android:orientation="vertical">
 
-                <LinearLayout
 
-                    android:background="@color/white"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/logocolor"
+                    app:civ_border_color="@color/green"
+                    app:civ_border_width="1dp" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="?actionBarSize">
-                    <RelativeLayout
-
-
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="14dp"
-                            android:layout_alignParentStart="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="16dp"
-                            android:src="@drawable/bagblack" />
-
-                        <ImageView
-                            android:id="@+id/imgShowMenu2"
-
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerVertical="true"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginEnd="16dp"
-                            android:src="@drawable/showmenu" />
-
-                    </RelativeLayout>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:id="@+id/id_layout_Myprofile"
-                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="50dp"
-
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="20dp"
                     android:gravity="center|bottom"
                     android:orientation="vertical">
 
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_margin="8dp"
-                        android:src="@drawable/logocolor"
-                        app:civ_border_color="@color/green"
-                        app:civ_border_width="1dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="20dp"
-                        android:gravity="center|bottom"
-                        android:orientation="vertical">
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mahmoud Gamiiiil"
-                            android:textColor="@color/black"
-                            android:textSize="18sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-
-                    android:layout_width="210dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_weight="1"
-                    android:gravity="start"
-                    android:orientation="vertical">
-
                     <TextView
-                        android:id="@+id/main_tv"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
-                        android:text="الرئيسية"
+                        android:text="Mahmoud Gamiiiil"
                         android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:id="@+id/nameTv"
+                        android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
-                        android:text="نبذة عنا"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
-                        android:text="تقييم التطبيق"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
-                        android:text="سلة الشراء"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
-                        android:text="الاسئلة الشائعه"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/callUs_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="16dp"
-                        android:text="اتصل بنا"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
 
+            <LinearLayout
 
-        </nl.psdcompany.duonavigationdrawer.views.DuoMenuView>
+                android:layout_width="210dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="vertical">
 
-        <RelativeLayout
+                <TextView
+                    android:id="@+id/main_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="الرئيسية"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="نبذة عنا"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-            android:tag="@string/tag_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="تقييم التطبيق"
+                    android:id="@+id/rateApp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-            <FrameLayout
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:id="@+id/cartTv"
+                    android:text="سلة الشراء"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-                android:id="@+id/container"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="الاسئلة الشائعه"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/callUs_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="اتصل بنا"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </nl.psdcompany.duonavigationdrawer.views.DuoMenuView>
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:tag="@string/tag_content">
+        <FrameLayout
+
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topLayFront"
+            android:background="@color/gray"
+            android:elevation="50dp">
+
+            <RelativeLayout
+                android:id="@+id/mainLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
-                android:background="@color/white"
-                android:elevation="50dp">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_gravity="bottom"
-    android:elevation="16dp"
-    android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_alignParentBottom="true"
-        android:gravity="bottom"
-        android:background="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="10dp">
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:elevation="16dp">
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/white"
+                    android:gravity="bottom">
+
+                </LinearLayout>
+
                 <com.etebarian.meowbottomnavigation.MeowBottomNavigation
 
-                    android:paddingBottom="10dp"
                     android:id="@+id/btm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
                     android:layout_gravity="bottom"
                     android:elevation="16dp"
 
 
-                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="10dp"
                     app:mbn_backgroundBottomColor="@color/white"
                     app:mbn_circleColor="@color/purple_500"
                     app:mbn_countBackgroundColor="@color/purple_500"
@@ -219,104 +239,122 @@
                     app:mbn_selectedIconColor="@color/white"
                     app:mbn_shadowColor="@color/gray" />
 
-</RelativeLayout>
-            </FrameLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+
+            android:visibility="visible"
+            android:id="@+id/topLayFront"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="20dp">
+
             <LinearLayout
 
-                android:id="@+id/toolbar"
+
                 android:layout_width="match_parent"
-                android:elevation="50dp"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/white" >
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/imgShowMenu"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/showmenu" />
+
                 <LinearLayout
-
-
-
-                    android:gravity="center_vertical"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@color/white"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center
+">
 
                     <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="16dp"
-                        android:id="@+id/imgShowMenu"
 
-                        android:layout_marginEnd="16dp"
-                        android:src="@drawable/showmenu" />
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/pinmap" />
+
                     <LinearLayout
+                        android:id="@+id/layoutAddress"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:gravity="center
-"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        >
-                        <ImageView
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                            android:layout_gravity="center_vertical"
-                            android:layout_width="20dp"
-                            android:src="@drawable/pinmap"
-                            android:layout_height="20dp"/>
                         <LinearLayout
-                            android:orientation="vertical"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
-                            <LinearLayout
+
+                            <TextView
+                                android:layout_gravity="start"
+                                android:gravity="start"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_width="wrap_content"
-                                    android:textSize="12dp"
-                                    android:text="توصيل الي"
-                                    android:textColor="@color/black"
-                                    android:textStyle="bold"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:text="توصيل الي"
 
-                                    android:layout_height="wrap_content"/>
-                                <ImageView
-                                    android:src="@drawable/downarrow"
-                                    android:layout_width="14dp"
-                                    android:layout_height="14dp"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:layout_marginStart="16dp"
-                                    android:layout_marginEnd="16dp"
-                                    android:layout_width="wrap_content"
-                                    android:textSize="10dp"
-                                    android:text="جدة . البغدادية الشرقية"
-                                    android:textColor="@color/black_overlay"
-                                    android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
 
-                                    android:layout_height="match_parent"/>
+                                android:textStyle="bold" />
 
-                            </LinearLayout>
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"
+                                android:src="@drawable/downarrow" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:text="جدة . البغدادية الشرقية"
+                                android:textColor="@color/black_overlay"
+                                android:textSize="10dp"
+
+                                android:gravity="start"
+                                android:layout_gravity="start"
+                                android:lines="1"
+                                android:maxWidth="200dp"
+                                android:id="@+id/txtAddress"
+                                android:textStyle="bold" />
+
                         </LinearLayout>
                     </LinearLayout>
-
-                    <ImageView
-
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginStart="16dp"
-                        android:src="@drawable/searchback"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"/>
-
                 </LinearLayout>
+
+                <ImageView
+
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/searchback" />
+
             </LinearLayout>
+        </LinearLayout>
 
-        </RelativeLayout>
-
-
-
+    </RelativeLayout>
 
 
 </nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

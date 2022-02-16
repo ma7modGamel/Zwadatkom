@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="detailsPaymentViewModel"
+            type="com.safwa.zawadatkm_user.paymentsteps.ui.detailspayment.DetailsPaymentViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:id="@+id/details_payment"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        tools:context=".paymentsteps.PaymentActivity">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/swiperefresh"
+            android:layout_weight="1">
+            <ScrollView
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginBottom="100dp"
+                    android:paddingBottom="100dp"
+                    android:orientation="vertical"
+                    android:id="@+id/lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="24dp">
+
+                            <ImageButton
+                                android:id="@+id/btnBack"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/itembackbtn"
+                                android:src="@drawable/graybackarrow" />
+
+                        </RelativeLayout>
+                        <TextView
+                            android:gravity="end"
+                            android:layout_width="0dp"
+                            android:text="إكمال الطلب"
+                            android:textStyle="bold"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="32dp"
+                            android:textColor="@color/black"
+                            android:text="مكان التوصيل"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            android:id="@+id/txtAddNewAddress"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/purple_700"
+                            android:text="اضف عنوان "
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:id="@+id/rvAddress"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:id="@+id/emptyCartTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="Address is empty" />
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="32dp"
+                            android:textColor="@color/black"
+                            android:text="وسيلة الدفع"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:layout_margin="16dp"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="53dp">
+                            <LinearLayout
+
+                                android:id="@+id/layPayOnHome"
+                                android:background="@drawable/cardbordergreenwhite"
+                                android:layout_marginEnd="32dp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginStart="4dp"
+                                    android:padding="4dp"
+                                    android:src="@drawable/payinhome"
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"/>
+
+                                    <TextView
+                                       android:paddingStart="16dp"
+                                        android:paddingEnd="16dp"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:text="عند الاستلام"
+                                        android:gravity="center"
+                                        android:layout_height="match_parent"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:background="@drawable/cardwhite"
+                                android:id="@+id/layPayStc"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_marginStart="4dp"
+                                    android:padding="12dp"
+                                    android:src="@drawable/stcpay"
+                                    android:layout_width="150dp"
+                                    android:layout_height="match_parent"/>
+
+                                      </LinearLayout>
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="32dp"
+                            android:textColor="@color/black"
+                            android:text="تاريخ التوصيل"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:id="@+id/edTime"
+                            android:background="@drawable/edittextcardgray2"
+                            android:layout_width="match_parent"
+                            android:layout_margin="16dp"
+                            android:layout_height="50dp">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/calender"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:text="برجاء اختيار الوقت والتاريخ "
+                                android:textColor="@color/purple_200"
+                                android:layout_margin="4dp"
+                                android:layout_width="0dp"
+                                android:id="@+id/etTime"
+                                android:layout_weight="1"
+                                android:paddingStart="16dp"
+                                android:background="@color/gray"
+                                android:layout_height="match_parent"/>
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/nextraw"
+                                android:layout_height="16dp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="32dp"
+                            android:textColor="@color/black"
+                            android:text="رصيد المحفظة"
+                            android:layout_height="wrap_content"/>
+
+                        <LinearLayout
+                            android:background="@drawable/edittextcardgray2"
+                            android:layout_width="match_parent"
+                            android:layout_margin="16dp"
+                            android:layout_height="50dp">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:paddingEnd="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/wallet"
+                                android:layout_height="match_parent"/>
+                            <TextView
+                                android:gravity="center_vertical"
+                                android:text="00 : 00 "
+                                android:textColor="@color/black"
+                                android:layout_margin="4dp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingStart="16dp"
+                                android:background="@color/gray"
+                                android:layout_height="match_parent"/>
+                            <androidx.appcompat.widget.SwitchCompat
+                                android:layout_width="wrap_content"
+                                android:layout_marginEnd="16dp"
+                                android:id="@+id/switchId"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="16dp"
+                                android:src="@drawable/nextraw"
+                                android:layout_height="16dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_margin="16dp"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/dotline"
+                            android:layout_height="4dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="32dp"
+                                android:textColor="@color/black"
+                                android:text="الاجمالى"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/finalTxt"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="14sp"
+
+                                android:textStyle="bold"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/teal_700"
+                                android:text="0 ر.س"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatButton
+
+                            android:layout_marginTop="32dp"
+                            android:background="@drawable/ripple_effect"
+                            android:layout_gravity="center"
+
+                            android:id="@+id/ContinuoToPayment"
+                            android:minWidth="200dp"
+                            android:textColor="@color/white"
+                            android:text="اتمام الطلب"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginStart="64dp"
+                            android:layout_marginEnd="64dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    </LinearLayout>
+</layout>

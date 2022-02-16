@@ -6,12 +6,13 @@
 
         <variable
             name="loginViewModel"
-            type="com.safwa.zwadatkom.usercontrol.LoginViewModel" />
+            type="com.safwa.zawadatkm_user.usercontrol.LoginViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layoutDirection="rtl"
         tools:context=".usercontrol.LoginFragment">
 
         <ScrollView
@@ -96,12 +97,14 @@
                         android:layout_gravity="center"
                         android:layout_marginEnd="12dp"
                         android:gravity="center_vertical"
-                        android:text="ahmedfares659@gmail.com"
-                        android:hint="الايميل او الجوال"
-                        android:layout_width="match_parent"
-                        android:textSize="12sp"
 
-                        android:layout_height="match_parent" />
+                        android:hint="الايميل او الجوال"
+                    android:layout_width="match_parent"
+                    android:textSize="12sp"
+
+android:text="mahmoudgamel10@gmail.com"
+                    android:layout_height="match_parent" />
+                    <!--                        android:text="ahmedfares659@gmail.com"-->
                 </LinearLayout>
 
                 <TextView
@@ -249,15 +252,16 @@
                             android:layout_height="match_parent" />
 
                         <ImageView
-                            android:elevation="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/face"
-                            android:padding="12dp" />
+                            android:elevation="10dp"
+                            android:padding="12dp"
+                            android:src="@drawable/face" />
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_margin="8dp"
+                        android:visibility="gone"
                         android:background="@drawable/ripple_gray"
                         android:layout_width="64dp"
                         android:layout_height="64dp">
@@ -268,14 +272,16 @@
                             android:layout_height="match_parent" />
 
                         <ImageView
-                            android:elevation="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/twitter"
-                            android:padding="12dp" />
+                            android:elevation="10dp"
+                            android:padding="12dp"
+                            android:src="@drawable/twitter" />
                     </RelativeLayout>
 
                     <RelativeLayout
+                        android:id="@+id/FrGoogle"
+
                         android:layout_margin="8dp"
                         android:background="@drawable/ripple_gray"
                         android:layout_width="64dp"
@@ -283,16 +289,27 @@
 
                         <androidx.appcompat.widget.AppCompatButton
                             android:layout_width="match_parent"
+                            android:elevation="50dp"
+                            android:id="@+id/btn"
                             android:background="@drawable/ripple_gray"
                             android:layout_height="match_parent" />
 
+                        <com.google.android.gms.common.SignInButton
+                           android:visibility="visible"
+                            android:id="@+id/logiGoogle"
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:elevation="8dp" />
+
                         <ImageView
-                            android:elevation="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:elevation="10dp"
+                            android:padding="12dp"
 
+                            android:id="@+id/imgGoogle"
                             android:src="@drawable/google"
-                            android:padding="12dp" />
+                            android:visibility="visible" />
                     </RelativeLayout>
                 </LinearLayout>
 

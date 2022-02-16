@@ -5,7 +5,7 @@
     <data>
         <variable
             name="SignUpViewModel"
-            type="com.safwa.zwadatkom.usercontrol.SignUpViewModel" />
+            type="com.safwa.zawadatkm_user.usercontrol.SignUpViewModel" />
 
     </data>
 
@@ -111,8 +111,8 @@
 
                     android:textColor="@color/black"
 
-                    android:text="البريد والجوال"
-                    android:layout_marginTop="32dp"
+                    android:text="البريد "
+                    android:layout_marginTop="8dp"
                     android:layout_marginStart="32dp"
                     android:lineSpacingExtra="7sp"
 
@@ -143,8 +143,57 @@
                         android:layout_marginStart="16dp"
                         android:layout_gravity="center"
                         android:layout_marginEnd="12dp"
+                        android:inputType="textEmailAddress"
                         android:gravity="center_vertical"
-                        android:hint="الايميل او الجوال"
+                        android:hint="الايميل "
+                        android:layout_width="match_parent"
+                        android:textSize="12sp"
+
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/black"
+
+                    android:text="الجوال"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="32dp"
+                    android:lineSpacingExtra="7sp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@drawable/etcolor"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:src="@mipmap/icphone"
+                        android:layout_margin="12dp"
+                        android:padding="4dp"
+                        android:layout_height="28dp" />
+
+                    <EditText
+
+                        android:id="@+id/phoneId"
+                        android:background="@color/gray"
+                        android:layout_marginStart="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:gravity="center_vertical"
+                        android:hint=" الجوال"
+                        android:inputType="phone"
                         android:layout_width="match_parent"
                         android:textSize="12sp"
 

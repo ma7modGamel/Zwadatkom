@@ -14,9 +14,13 @@
       <ImageView
           android:layout_width="170dp"
           android:maxWidth="180dp"
+          android:id="@+id/imgPro"
+          android:scaleType="centerCrop"
           android:src="@drawable/tomato"
           android:layout_height="100dp"/>
       <LinearLayout
+          android:layout_gravity="bottom|center"
+          android:gravity="bottom|center"
           android:orientation="vertical"
           android:background="@drawable/edittextcardgray"
           android:layout_width="match_parent"
@@ -29,7 +33,9 @@
               android:layout_marginBottom="2dp"
               android:layout_marginTop="8dp"
               android:layout_weight="1"
-              android:text="احدث المنتجات"
+              android:lines="1"
+              android:id="@+id/namePro"
+              android:text=""
               android:textColor="@color/black"
               android:textSize="16sp"
               android:textStyle="bold" />
@@ -38,10 +44,11 @@
               android:layout_height="wrap_content"
               android:layout_marginEnd="12dp"
               android:layout_marginStart="16dp"
-              android:layout_marginBottom="8dp"
+              android:lines="1"
 
+              android:id="@+id/catPro"
               android:layout_weight="1"
-              android:text="20 كيلو جرام"
+              android:text=""
               android:textColor="@color/black_overlay"
               android:textSize="12sp" />
           <LinearLayout
@@ -50,14 +57,16 @@
               <TextView
                   android:layout_width="0dp"
 
+                  android:lines="1"
                   android:layout_height="wrap_content"
                   android:layout_marginEnd="12dp"
                   android:layout_marginStart="16dp"
                   android:layout_marginBottom="2dp"
                   android:layout_marginTop="8dp"
                   android:layout_weight="1"
-                  android:text="25 ر.س"
-                  android:textColor="@color/purple_700"
+                  android:text=""
+                  android:id="@+id/pricePro"
+                  android:textColor="@color/green"
                   android:textSize="16sp"
                   android:textStyle="bold" />
               <RelativeLayout
@@ -66,6 +75,7 @@
                   android:layout_height="match_parent">
 
                   <ImageButton
+                      android:id="@+id/rlAddtocart"
 
                       android:layout_width="40dp"
 

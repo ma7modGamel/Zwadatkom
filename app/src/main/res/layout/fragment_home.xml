@@ -1,374 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="25dp"
-    tools:context=".Home.HomeFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+    <data>
+
+        <variable
+            name="homeViewModel"
+            type="com.safwa.zawadatkm_user.home.HomeViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="25dp"
+        tools:context=".home.HomeFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <LinearLayout
-            android:paddingBottom="35dp"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
-                <ScrollView
-                    android:id="@+id/hsv"
+                <!-- TODO: Update blank fragment layout -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fillViewport="true"
-                    android:measureAllChildren="true"
-                    android:scrollbars="horizontal"
-                    tools:ignore="UselessParent">
+                    android:orientation="vertical"
+                    android:paddingBottom="35dp">
+
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
                         <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="220dp"
-                            android:layout_marginStart="12dp">
+                            android:id="@+id/RelativePager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                            <LinearLayout
+                            <androidx.viewpager.widget.ViewPager
+                                android:id="@+id/view_pager"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent">
+                                android:layout_height="200dp" />
 
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/bgads" />
-                            </LinearLayout>
-
-                            <LinearLayout
+                            <me.relex.circleindicator.CircleIndicator
+                                android:id="@+id/indecator"
                                 android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginStart="16dp"
+                                android:layout_height="48dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
 
-
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_margin="16dp"
-                                    android:gravity="center"
-                                    android:text="عرض الاسبوع"
-                                    android:textColor="@color/black"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold" />
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="خصم 50 في المية"
-                                    android:textColor="@color/green"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-
+                                app:ci_drawable="@drawable/cardredcircle"
+                                android:gravity="center" />
                         </RelativeLayout>
 
-                    </LinearLayout>
-                </ScrollView>
-            </LinearLayout>
-
-            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-                android:id="@+id/dots_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="12dp"
-                android:background="@color/gray"
-                app:dotsColor="@color/graygreen"
-                app:dotsCornerRadius="4dp"
-                app:dotsSize="10dp"
-                app:dotsSpacing="4dp"
-                app:dotsWidthFactor="2.5"
-                app:selectedDotColor="@color/purple_700" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_weight="1"
-                        android:text="التصنيفات"
-                        android:textColor="@color/black"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="عرض الكل"
-                        android:textColor="@color/purple_700"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_weight="1"
+                                    android:text="التصنيفات"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+
+                                    android:id="@+id/txtShowAll"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:text="عرض الكل"
+                                    android:textColor="@color/purple_700"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/catRv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="12dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="1"
+                                android:text="احدث المنتجات"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="4dp"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <ImageView
-
-                                    android:layout_width="69dp"
-                                    android:layout_height="69dp"
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvProducts"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
 
 
-                                    android:background="@drawable/edittextred"
-                                    android:padding="15dp"
-
-                                    android:src="@drawable/tomato" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:lineSpacingExtra="13sp"
-                                    android:text="خضار"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="4dp"
-                                android:gravity="center"
-
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="69dp"
-
-                                    android:layout_height="69dp"
-
-
-                                    android:background="@drawable/edittextred"
-                                    android:padding="12dp"
-
-                                    android:src="@drawable/tomato" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:lineSpacingExtra="13sp"
-                                    android:text="خضار"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="4dp"
-                                android:gravity="center"
-
-                                android:orientation="vertical">
-
-                                <ImageView
-
-                                    android:layout_width="69dp"
-                                    android:layout_height="69dp"
-
-
-                                    android:background="@drawable/edittextred"
-
-                                    android:padding="16dp"
-                                    android:src="@drawable/tomato" />
-
-                                <TextView
-                                    android:id="@+id/some_id"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:lineSpacingExtra="13sp"
-                                    android:text="خضار"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="4dp"
-                                android:gravity="center"
-
-                                android:orientation="vertical">
-
-                                <ImageView
-
-                                    android:layout_width="69dp"
-                                    android:layout_height="69dp"
-
-
-                                    android:background="@drawable/edittextred"
-
-                                    android:padding="16dp"
-                                    android:src="@drawable/tomato" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:lineSpacingExtra="13sp"
-                                    android:text="خضار"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="4dp"
-                                android:gravity="center"
-
-                                android:orientation="vertical">
-
-                                <ImageView
-
-                                    android:layout_width="69dp"
-                                    android:layout_height="69dp"
-
-
-                                    android:background="@drawable/edittextred"
-
-                                    android:padding="16dp"
-                                    android:src="@drawable/tomato" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:lineSpacingExtra="13sp"
-                                    android:text="خضار"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="4dp"
-                                android:gravity="center"
-
-                                android:orientation="vertical">
-
-                                <ImageView
-
-                                    android:layout_width="75dp"
-                                    android:layout_height="75dp"
-
-
-                                    android:background="@drawable/edittextred"
-
-                                    android:padding="16dp"
-                                    android:src="@drawable/tomato" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:lineSpacingExtra="13sp"
-                                    android:text="خضار"
-                                    android:textColor="@color/black"
-                                    android:textSize="14sp" />
-                            </LinearLayout>
                         </LinearLayout>
-                    </HorizontalScrollView>
+                    </LinearLayout>
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:text="احدث المنتجات"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <GridLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:columnCount="2">
-
-                        <include layout="@layout/itemproducthome" />
-
-                        <include layout="@layout/itemproducthome" />
-
-                        <include layout="@layout/itemproducthome" />
-
-                        <include layout="@layout/itemproducthome" />
-
-                    </GridLayout>
-                </ScrollView>
-
-
-            </LinearLayout>
-        </LinearLayout>
-
-    </ScrollView>
-
-</LinearLayout>
+    </LinearLayout>
+</layout>

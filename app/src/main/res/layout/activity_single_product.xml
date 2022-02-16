@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="SingleViewModel"
+            type="com.safwa.zawadatkm_user.single.SingleProductViewModel" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".single.SingleProductActivity">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+
+                        <LinearLayout
+
+                            android:elevation="100dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="32dp">
+
+                                <ImageButton
+                                    android:id="@+id/btnBack"
+                                    android:layout_width="60dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/itembackbtn"
+                                    android:src="@drawable/graybackarrow" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <RelativeLayout
+
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:padding="4dp"
+                                android:layout_margin="32dp">
+
+                                <ImageView
+                                    android:id="@+id/bag"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/bagblack" />
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:id="@+id/bndgRed"
+                                    android:layout_margin="4dp"
+                                    android:visibility="gone"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignTop="@+id/bag"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@color/purple_200" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="270dp">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewPager"
+                            android:layout_width="match_parent"
+                            android:layout_height="260dp" />
+
+                        <me.relex.circleindicator.CircleIndicator
+                            android:id="@+id/indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:layout_below="@+id/viewPager"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="60dp"
+                            android:foregroundGravity="center" />
+
+                    </RelativeLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginEnd="32dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/iconcar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:text="سيصلك الطلب خلال 30 دقيقة"
+
+
+                            android:textColor="@color/green"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+
+                        android:id="@+id/txtNameItem"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text=""
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+
+                        android:layout_marginTop="16dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                     <LinearLayout
+                         android:orientation="vertical"
+                         android:layout_width="0dp"
+                         android:layout_weight="1"
+                         android:layout_height="wrap_content">
+                         <LinearLayout
+
+                             android:layout_margin="8dp"
+                             android:layout_width="match_parent"
+                             android:background="@drawable/edittextcardgray2"
+                             android:layout_height="wrap_content">
+                             <ImageView
+                                 android:padding="3dp"
+                                 android:layout_width="24dp"
+                                 android:id="@+id/catimage"
+                                 android:layout_marginStart="4dp"
+                                 android:src="@drawable/tomato"
+                                 android:layout_height="24dp"/>
+                             <TextView
+                                 android:text=""
+                                 android:id="@+id/txtNameCategory"
+                                 android:layout_marginStart="8dp"
+                                 android:layout_marginEnd="8dp"
+                                 android:gravity="center"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="match_parent"/>
+                         </LinearLayout>
+                         <LinearLayout
+
+                             android:layout_margin="8dp"
+                             android:layout_width="match_parent"
+                             android:background="@drawable/edittextcardgray2"
+                             android:layout_height="wrap_content">
+
+                             <Spinner
+                                 android:layout_width="match_parent"
+                                 android:id="@+id/spinner"
+                                 android:textSize="11sp"
+                                 android:spinnerMode="dropdown"
+                                 android:layout_height="24dp"/>
+                         </LinearLayout>
+                     </LinearLayout>
+
+                        <TextView
+                            android:textSize="25sp"
+                            android:textColor="@color/teal_200"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="0 ر.س "
+
+                            android:id="@+id/txtprice"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="match_parent"/>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+
+                        android:layout_marginTop="16dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="تفاصيل"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="match_parent"
+
+                        android:layout_marginTop="14dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+
+                        android:id="@+id/txtDetails"
+                        android:layout_marginBottom="16dp"
+                        android:textColor="@color/black_overlay"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+           <LinearLayout
+               android:layout_weight="1"
+               android:layout_width="0dp"
+               android:layout_gravity="center"
+               android:gravity="center"
+               android:layout_height="match_parent">
+               <RelativeLayout
+                   android:layout_width="30dp"
+                   android:layout_height="30dp">
+                   <ImageButton
+                       android:id="@+id/img_decrease"
+
+                       android:layout_width="match_parent"
+                       android:background="@drawable/itemgraybtn"
+                       android:layout_height="match_parent"/>
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:padding="4dp"
+                       android:src="@drawable/ic_baseline_add_24" />
+               </RelativeLayout>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:textColor="@color/black"
+                   android:minWidth="50dp"
+                   android:textSize="22sp"
+                   android:text="1"
+                   android:id="@+id/txtQuantity"
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   android:layout_height="match_parent"/>
+               <RelativeLayout
+                   android:layout_width="30dp"
+                   android:layout_height="30dp">
+                   <ImageButton
+                       android:layout_width="match_parent"
+                       android:id="@+id/img_increase"
+
+                       android:background="@drawable/itemgraybtn"
+                       android:layout_height="match_parent"/>
+
+
+                   <ImageView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:padding="4dp"
+                       android:src="@drawable/ic_baseline_remove_24" />
+               </RelativeLayout>
+           </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="200dp"
+
+                android:id="@+id/addtocart"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:text="اضف للسلة"
+                android:background="@drawable/ripple_item_cart"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

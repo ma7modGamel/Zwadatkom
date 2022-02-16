@@ -1,10 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Home.CartFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
+    <data>
 
-</FrameLayout>
+        <variable
+            name="CartViewModel"
+            type="com.safwa.zawadatkm_user.home.CartViewModel" />
+    </data>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.CartFragment">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/swiperefresh"
+            android:layout_weight="1">
+            <ScrollView
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_marginBottom="100dp"
+                    android:paddingBottom="100dp"
+                    android:orientation="vertical"
+                    android:id="@+id/lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="24dp">
+
+                            <ImageButton
+                                android:id="@+id/btnBack"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/itembackbtn"
+                                android:src="@drawable/graybackarrow" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="32dp"
+                            android:textColor="@color/black"
+                            android:text="سلة المشتريات"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:id="@+id/numItem"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/purple_700"
+                            android:text="0  عناصر "
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                   <LinearLayout
+                       android:orientation="vertical"
+                       android:minHeight="250dp"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+                       <androidx.recyclerview.widget.RecyclerView
+                           android:layout_width="match_parent"
+                           android:id="@+id/rvCart"
+
+                           android:layout_height="wrap_content"/>
+                       <TextView
+                           android:id="@+id/emptyCartTv"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="20dp"
+                           android:gravity="center"
+                           android:text="Cart is empty" />
+
+
+
+
+                   </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/edittextcardgraybordergreen"
+                        android:layout_marginTop="32dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_height="50dp">
+
+                        <EditText
+
+                            android:id="@+id/codeEt"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@color/gray"
+                            android:hint="@string/procode"
+                            android:gravity="center"
+                            android:layout_height="match_parent"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+
+                            android:background="@drawable/ripple_effect"
+                            android:layout_gravity="center"
+
+                            android:id="@+id/addProCode"
+                            android:minWidth="80dp"
+                            android:textColor="@color/white"
+                            android:text="تطبيق"
+                            android:textSize="11sp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_marginStart="24dp"
+
+                            android:layout_marginEnd="24dp"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp" />
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="7sp"
+                        android:id="@+id/txthint"
+                        android:textColor="@color/purple_200"
+                        />
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_margin="16dp"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/dotline"
+                            android:layout_height="4dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="32dp"
+                                android:textColor="@color/black"
+                                android:text="السعر"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/txtPrice"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:text="0 ر.س"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="32dp"
+                                android:textColor="@color/purple_200"
+                                android:text="الخصم"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/txtProm"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+
+                                android:textStyle="bold"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/purple_200"
+                                android:text="0 ر.س"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="32dp"
+                                android:textColor="@color/black"
+                                android:text="الاجمالى"
+                                android:layout_height="wrap_content"/>
+                            <TextView
+                                android:id="@+id/finalTxt"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+
+                                android:textStyle="bold"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:text="0 ر.س"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_margin="16dp"
+                            android:layout_width="match_parent"
+                            android:background="@drawable/dotline"
+                            android:layout_height="4dp"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+
+                            android:layout_marginTop="32dp"
+                            android:background="@drawable/ripple_effect"
+                            android:layout_gravity="center"
+
+                            android:id="@+id/ContinuoToPayment"
+                            android:minWidth="200dp"
+                            android:textColor="@color/white"
+                            android:text="متابعة للدفع"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="32dp"
+                            android:layout_marginStart="64dp"
+                            android:layout_marginEnd="64dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        <!-- TODO: Update blank fragment layout -->
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_margin="8dp"
+    android:padding="16dp"
+    android:id="@+id/lay"
+    android:background="@drawable/edittextcardgray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:gravity="center_horizontal"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_Country"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:gravity="center"
+            android:lines="1"
+            android:text="المملكة العربية السعودية"
+            android:textColor="@color/black"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="050 355 15554 320"
+        android:id="@+id/tv_typeAddress"
+        android:textColor="@color/black"
+        android:alpha="0.64"
+        android:layout_marginTop="8dp"
+android:layout_marginBottom="8dp"
+        android:lines="1"
+        android:textSize="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:id="@+id/tv_moreAddress"
+        android:text=" جدة البغدادية الشرقية"
+        android:alpha="0.64"
+        android:gravity="center"
+        android:lines="2"
+        android:textColor="@color/black"
+        android:textSize="12dp" />
+</LinearLayout>

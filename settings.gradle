@@ -1,13 +1,13 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
         jcenter()
-
         maven { url "https://maven.xyz.com" }
-
     }
 }
-rootProject.name = "Zwadatkom"
+rootProject.name = "Zawadatkm-User"
 include ':app'

@@ -7,8 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="transparent">#00FFFFFF</color>
     <color name="gray">#F9F9F9</color>
     <color name="graygreen">#EDF7E8</color>
+    <color name="blakicon">#464646</color>
+    <color name="graystrok">#EDEDED</color>
     <color name="green">#29B566</color>
     <color name="greenbackground">#8AC865</color>
     <color name="light_blue_600">#FF039BE5</color>

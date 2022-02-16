@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+        <variable
+            name="productsVmodel"
+            type="com.safwa.zawadatkm_user.products.ui.main.ProducViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/products"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+
+                    android:id="@+id/lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="24dp">
+
+                            <ImageButton
+                                android:id="@+id/btnBack"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/itembackbtn"
+                                android:src="@drawable/graybackarrow" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <RelativeLayout
+
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/bag"
+                                android:layout_width="15dp"
+                                android:layout_height="14dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/bagblack" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/bndgRed"
+                                android:layout_width="5dp"
+                                android:layout_height="5dp"
+                                android:layout_alignTop="@+id/bag"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:src="@color/purple_200"
+                                android:visibility="gone" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginStart="24dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/etcolor">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="8dp"
+                                android:padding="4dp"
+                                android:src="@drawable/search"
+                                android:tint="@color/green" />
+
+                            <EditText
+
+                                android:hint="اكتب محتوي البحث"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="32dp"
+                                android:layout_marginEnd="32dp"
+                                android:background="@color/gray"
+                                android:lines="1"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+
+                            android:layout_marginStart="8dp">
+
+                            <ImageView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/etcolor"
+                                android:paddingStart="8dp"
+                                android:paddingTop="16dp"
+                                android:paddingEnd="8dp"
+                                android:paddingBottom="4dp"
+                                android:src="@drawable/filter" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/rvCat"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgCat"
+                            android:layout_gravity="center"
+                            android:src="@drawable/tomato"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp" />
+
+                        <TextView
+                            android:id="@+id/txtCat"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
+                            android:text="خضار"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:id="@+id/rvProduvts"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="لايوجد منتجات"
+                        android:gravity="center"
+                        android:id="@+id/noitem"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="profileVmodel"
+            type="com.safwa.zawadatkm_user.home.ProfileViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".home.CartFragment">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_marginBottom="60dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+
+                            android:id="@+id/layTop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:elevation="10dp"
+                            android:gravity="center">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="24dp">
+
+                                <ImageButton
+                                    android:id="@+id/btnBack"
+                                    android:layout_width="60dp"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/itembackbtntrans"
+                                    android:src="@drawable/graybackarrow"
+                                    android:tint="@color/white" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="315dp"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/bgprofile" />
+
+                        <LinearLayout
+                            android:id="@+id/infoLay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layTop"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/logowhite" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="16dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="محمد ابراهيم "
+                                    android:id="@+id/txtNameUser"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:id="@+id/txtPhone"
+                                    android:text="تID : 644841515"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_below="@id/infoLay"
+
+                            android:id="@+id/layunfoAcc"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginBottom="32dp"
+                            android:background="@drawable/edittextcardwite"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:paddingStart="8dp"
+
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <ImageView    android:layout_margin="8dp"
+                                    android:layout_width="50dp"
+                                    android:padding="12dp"
+                                    android:src="@drawable/walletwhite"
+                                    android:background="@drawable/cardredcircle"
+                                    android:layout_height="50dp"/>
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:text="رصيدي بالمحفظة"
+                                        android:textColor="@color/black"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:id="@+id/txtValueWallet"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:text="00 : 00"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@color/gray"
+                                android:layout_height="match_parent"/>
+                            <LinearLayout
+                                android:layout_weight="0.9"
+                                android:layout_width="0dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:paddingStart="8dp"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+
+                                        android:layout_height="50dp"
+                                        android:layout_marginStart="8dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginEnd="8dp"
+                                        android:layout_marginBottom="8dp"
+                                        android:background="@drawable/cardorangecircle"
+                                        android:padding="12dp"
+                                        android:src="@drawable/cardorange" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:text="طلباتى"
+                                        android:textColor="@color/black"
+                                        android:textSize="11sp" />
+
+                                    <TextView
+                                        android:gravity="start"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:text="20"
+                                        android:id="@+id/txtNumOrder"
+                                        android:textColor="@color/black"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layunfoAcc"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginBottom="32dp"
+                            android:background="@drawable/edittextcardwite"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/layProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/itemwhiteribble">
+
+                                <LinearLayout
+                                    android:layout_width="40dp"
+
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:background="@drawable/edittextcardwite"
+                                    android:src="@drawable/calender">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rectgreen"
+                                        android:padding="8dp"
+                                        android:src="@drawable/person"
+                                        android:tint="@color/white" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="16dp"
+                                    android:text="بياناتى الشخصية "
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/nextraw" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/gray" />
+
+                            <LinearLayout
+                                android:id="@+id/layMyCard"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/itemwhiteribble"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="40dp"
+
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:background="@drawable/edittextcardwite"
+                                    android:src="@drawable/calender">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rectblue"
+                                        android:padding="8dp"
+                                        android:src="@drawable/card2"
+                                        android:tint="@color/white" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="16dp"
+                                    android:text="بطاقاتى "
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/nextraw" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/gray"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/layMyOrders"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/itemwhiteribble">
+
+                                <LinearLayout
+                                    android:layout_width="40dp"
+
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:background="@drawable/edittextcardwite"
+                                    >
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rectmove"
+                                        android:padding="8dp"
+                                        android:src="@drawable/myorders"
+                                        android:tint="@color/white" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="16dp"
+                                    android:text="طلباتى "
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/nextraw" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/gray" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/itemwhiteribble">
+
+                                <LinearLayout
+                                    android:layout_width="40dp"
+
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:background="@drawable/edittextcardwite"
+                                    android:src="@drawable/calender">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rectmove2"
+                                        android:padding="8dp"
+                                        android:src="@drawable/setting2"
+                                        android:tint="@color/white" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="16dp"
+                                    android:text="الاعدادات "
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/nextraw" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/gray" />
+
+
+                            <LinearLayout
+                                android:id="@+id/logout"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="16dp"
+                                android:background="@drawable/itemwhiteribble">
+
+                                <LinearLayout
+                                    android:layout_width="40dp"
+
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:background="@drawable/edittextcardwite"
+                                    android:src="@drawable/calender">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/rectred"
+                                        android:padding="8dp"
+                                        android:src="@drawable/logout"
+                                        android:tint="@color/white" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:paddingStart="16dp"
+                                    android:text="تسجيل الخروج "
+                                    android:textColor="@color/black" />
+
+                                <ImageView
+                                    android:layout_width="16dp"
+                                    android:layout_height="16dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:src="@drawable/nextraw" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+</layout>
